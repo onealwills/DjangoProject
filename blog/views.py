@@ -1,3 +1,5 @@
+from .models import Post, Comment
+from .forms import EmailPostForm, CommentForm, SearchForm
 from django.core.mail import send_mail
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import Count
@@ -6,8 +8,6 @@ from django.views.generic import ListView
 from taggit.models import Tag
 from django.db.models import Count
 from django.contrib.postgres.search import SearchVector
-from .forms import EmailPostForm, CommentForm, SearchForm
-from .models import Post, Comment
 
 
 def post_list(request, tag_slug=None):
